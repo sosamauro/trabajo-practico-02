@@ -10,23 +10,18 @@ namespace Ejercicio01
     {
         public static void MostrarPantalla()
         {
-            double x, y, r;
-
             Console.Clear();
             Console.WriteLine("Ingrese el centro del circulo");
             Console.Write("Coordenada en X: ");
-            x = Double.Parse(Console.ReadLine());
+            double x = Double.Parse(Console.ReadLine());
             Console.Write("Coordenada en Y: ");
-            y = Double.Parse(Console.ReadLine());
-            Console.Write("Ingrese el radio del circulo");
-            r = Double.Parse(Console.ReadLine());
-
-            var punto = new Punto(x, y);
-            var circulo = new Circulo(punto, r);
+            double y = Double.Parse(Console.ReadLine());
+            Console.Write("Ingrese el radio del circulo: ");
+            double r = Double.Parse(Console.ReadLine());
 
             Console.WriteLine();
-            Console.WriteLine("Area: " + circulo.Area);
-            Console.WriteLine("Perimetro: " + circulo.Perimetro);
+            Console.WriteLine("Area: " + ControladorCirculo.Area(x, y, r));
+            Console.WriteLine("Perimetro: " + ControladorCirculo.Perimetro(x, y, r));
             Console.WriteLine();
             Console.Write("Presione ENTER para continuar...");
             Console.ReadKey();

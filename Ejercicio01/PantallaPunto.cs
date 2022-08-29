@@ -26,7 +26,7 @@ namespace Ejercicio01
             double y2 = Double.Parse(Console.ReadLine());
           
             Console.WriteLine();
-            Console.WriteLine("La distancia entre los dos puntos es: " + ControladorPunto.Distancia(x1,y1,x2,y2));
+            Console.WriteLine("La distancia entre los dos puntos es: " + ControladorPunto.Distancia(x1, y1, x2, y2));
             Console.WriteLine();
             Console.Write("Presione ENTER para continuar...");
             Console.ReadKey();
