@@ -8,41 +8,41 @@ namespace Ejercicio01
 {
     internal class Circulo
     {
-        private double _radio;
-        private Punto _centro;
+        private double iRadio;
+        private Punto iCentro;
 
         public Circulo(Punto pCentro, double pRadio)
         {
-            this._radio = pRadio;
-            this._centro = pCentro;
+            this.iRadio = pRadio;
+            this.iCentro = pCentro;
         }
 
         public Circulo(double pX, double pY, double pRadio)
         {
-            this._centro = new Punto(pX, pY);
-            this._radio = pRadio;
+            this.iCentro = new Punto(pX, pY);
+            this.iRadio = pRadio;
         }
 
         public double Radio
         {
-            get { return this._radio; }
-            set { this._radio = value; }
+            get { return this.iRadio; }
+            set { this.iRadio = value; }
         }
 
         public Punto Centro
         {
-            get { return this._centro; }
-            set { this._centro = value; }
+            get { return this.iCentro; }
+            set { this.iCentro = value; }
         }
 
         public double Area
         {
-            get { return Math.PI * Math.Pow(this._radio, 2); }
+            get { return Math.PI * Math.Pow(this.iRadio, 2); }
         }
 
         public double Perimetro
         {
-            get { return 2 * Math.PI * this._radio; }
+            get { return 2 * Math.PI * this.iRadio; }
         }
 
 

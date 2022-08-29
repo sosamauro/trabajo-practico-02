@@ -9,25 +9,25 @@ namespace Ejercicio01
     internal class Punto
     {
         // Atributos
-        private double _x, _y;
+        private double iX, iY;
 
         // Constructor
         public Punto(double pX, double pY)
         {
-            this._x = pX;
-            this._y = pY;
+            this.iX = pX;
+            this.iY = pY;
         }
 
         // Propiedades
         public double X 
         {  
-            get { return this._x; }
-            set { this._x = value; }
+            get { return this.iX; }
+            set { this.iX = value; }
         }
         public double Y 
         {  
-            get { return this._y; }
-            set { this._y = value; }
+            get { return this.iY; }
+            set { this.iY = value; }
         }
 
         //Método
@@ -35,7 +35,7 @@ namespace Ejercicio01
         {
             // Para calcular la distancia entre P1(X1;X2) y P2(X2;Y2) se utiliza:
             // Sqrt( (X2-X1)^2 + (Y2-Y1)^2 )
-            return Math.Sqrt(Math.Pow((this._x - pPunto.X), 2) + Math.Pow((this._y - pPunto.Y), 2));
+            return Math.Sqrt(Math.Pow((this.iX - pPunto.X), 2) + Math.Pow((this.iY - pPunto.Y), 2));
         }
 
     }
