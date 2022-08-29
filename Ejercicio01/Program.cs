@@ -13,7 +13,7 @@
                 Console.WriteLine();
                 Console.WriteLine("1) Punto");
                 Console.WriteLine("2) Circulo");
-                Console.WriteLine("3) Triangulo");
+                Console.WriteLine("3) Triángulo");
                 Console.WriteLine();
                 Console.WriteLine("4) Salir");
                 Console.WriteLine();
@@ -27,6 +27,9 @@
                         break;
                     case "2":
                         PantallaCirculo.MostrarPantalla();
+                        break;
+                    case "3":
+                        PantallaTriangulo.MostrarPantalla();
                         break;
                     case "4":
                         salir = true;
