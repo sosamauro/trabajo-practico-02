@@ -11,9 +11,9 @@
                 Console.Clear();
                 Console.WriteLine("Seleccione una opción");
                 Console.WriteLine();
-                Console.WriteLine("1) Punto");
-                Console.WriteLine("2) Circulo");
-                Console.WriteLine("3) Triángulo");
+                Console.WriteLine("1) Distancia entre 2 puntos");
+                Console.WriteLine("2) Área y perímetro de un círculo");
+                Console.WriteLine("3) Área y perímetro de un triángulo");
                 Console.WriteLine();
                 Console.WriteLine("4) Salir");
                 Console.WriteLine();

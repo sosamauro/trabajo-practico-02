@@ -35,6 +35,16 @@ namespace Ejercicio01
             set { this.iPunto3 = value; }
         }
 
+        public double Area
+        {
+            // Se utiliza la fórmula de Herón:
+            // P = Perimetro
+            // L = Lado
+            // Math.Sqrt( P/2 * (P/2 - L1) * (P/2 - L2) * (P/2 - L3) )
+
+            get { return Math.Sqrt( (Perimetro / 2) * ((Perimetro / 2) - iPunto1.CalcularDistanciaDesde(iPunto2)) * ((Perimetro / 2) - iPunto1.CalcularDistanciaDesde(iPunto3)) * ((Perimetro / 2) - iPunto2.CalcularDistanciaDesde(iPunto3))); }
+        }
+
         public double Perimetro
         {
             get { return iPunto1.CalcularDistanciaDesde(iPunto2) + iPunto1.CalcularDistanciaDesde(iPunto3) + iPunto2.CalcularDistanciaDesde(iPunto3); }
