@@ -10,8 +10,6 @@ namespace Ejercicio01
     {
         private double iRadio;
         private Punto iCentro;
-        private double iArea;
-        private double iPerimetro;
 
         public Circulo(Punto pCentro, double pRadio)
         {
@@ -21,8 +19,7 @@ namespace Ejercicio01
 
         public Circulo(double pX, double pY, double pRadio)
         {
-            this.iCentro.X = pX;
-            this.iCentro.Y = pY;
+            this.iCentro = new Punto(pX, pY);
             this.iRadio = pRadio;
         }
 
@@ -40,14 +37,12 @@ namespace Ejercicio01
 
         public double Area
         {
-            get { return this.iArea; }
-            set { this.iArea = value; }
+            get { return Math.PI * Math.Pow(this.iRadio, 2); }
         }
 
         public double Perimetro
         {
-            get { return this.iPerimetro; }
-            set { this.iPerimetro = value; }
+            get { return 2*Math.PI * this.iRadio; }
         }
 
 

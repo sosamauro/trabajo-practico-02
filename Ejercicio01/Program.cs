@@ -4,32 +4,45 @@
     {
         static void Main(string[] args)
         {
-            double X1,Y1,X2,Y2;
+            string opcion;
+            Boolean salir = false;
+            while (salir == false)
+            {
+                Console.Clear();
+                Console.WriteLine("Seleccione una opción");
+                Console.WriteLine();
+                Console.WriteLine("1) Punto");
+                Console.WriteLine("2) Circulo");
+                Console.WriteLine("3) Triangulo");
+                Console.WriteLine();
+                Console.WriteLine("4) Salir");
+                Console.WriteLine();
+                Console.Write("Opción: ");
+                opcion = Console.ReadLine();
 
-            Console.Clear();
-            Console.WriteLine("Seleccione una opción")
-            Console.WriteLine("")
-        
-            Console.WriteLine("Ingrese el primer punto.");
-            Console.Write("Coordenada en X: ");
-            X1 = Double.Parse(Console.ReadLine());
-            Console.Write("Coordenada en Y: ");
-            Y1 = Double.Parse(Console.ReadLine());
+                switch (opcion)
+                {
+                    case "1":
+                        PantallaPunto.MostrarPantalla();
+                        break;
+                    case "2":
+                        PantallaCirculo.MostrarPantalla();
+                        break;
+                    case "4":
+                        salir = true;
+                        Console.Clear();
+                        break;
+                    default:
+                        Console.Clear();
+                        Console.WriteLine("Ingrese una opción válida.");
+                        Console.WriteLine();
+                        Console.Write("Presione ENTER para continuar...");
+                        Console.ReadKey();
+                        Console.Clear();
+                        break;
+                }
 
-            Console.WriteLine();
-
-            Console.WriteLine("Ingrese el segundo punto.");
-            Console.Write("Coordenada en X: ");
-            X2 = Double.Parse(Console.ReadLine());
-            Console.Write("Coordenada en Y: ");
-            Y2 = Double.Parse(Console.ReadLine());
-
-            var punto1 = new Punto(X1, Y1);
-            var punto2 = new Punto(X2, Y2);
-            var distancia = punto2.CalcularDistanciaDesde(punto1);
-
-            Console.WriteLine();
-            Console.WriteLine("La distancia entre los dos puntos es: " + distancia);
+            }
         }
     }
 }
