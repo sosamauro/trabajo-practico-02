@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio01
 {
-    internal class PantallaCirculo
+    internal static class PantallaCirculo
     {
         public static void MostrarPantalla()
         {

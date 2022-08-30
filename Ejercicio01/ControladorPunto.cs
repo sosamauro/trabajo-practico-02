@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio01
 {
-    internal class ControladorPunto
+    internal static class ControladorPunto
     {
         public static double Distancia(double x1, double y1, double x2, double y2)
         {

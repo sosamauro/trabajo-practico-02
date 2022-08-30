@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio01
 {
-    internal class ControladorCirculo
+    internal static class ControladorCirculo
     {
         public static double Area(double x, double y, double r)
         {
