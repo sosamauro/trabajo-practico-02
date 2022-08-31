@@ -21,8 +21,8 @@ namespace Ejercicio01
             double r = Double.Parse(Console.ReadLine());
 
             Console.WriteLine();
-            Console.WriteLine("El área del círculo es: " + ControladorCirculo.Area(x, y, r));
-            Console.WriteLine("El perímetro del círculo es: " + ControladorCirculo.Perimetro(x, y, r));
+            Console.WriteLine("El área del círculo es: " + ControladorCirculo.CalcularArea(x, y, r));
+            Console.WriteLine("El perímetro del círculo es: " + ControladorCirculo.CalcularPerimetro(x, y, r));
             Console.WriteLine();
             Console.Write("Presione ENTER para continuar...");
             Console.ReadKey();

@@ -8,7 +8,7 @@ namespace Ejercicio01
 {
     internal static class ControladorTriangulo
     {
-        public static double Area(double x1, double x2, double x3, double y1, double y2, double y3)
+        public static double CalcularArea(double x1, double x2, double x3, double y1, double y2, double y3)
         {
             Punto punto1 = new Punto(x1, y1);
             Punto punto2 = new Punto(x2, y2);
@@ -19,7 +19,7 @@ namespace Ejercicio01
             return Math.Round(triangulo.Area, 2);
         }
 
-        public static double Perimetro(double x1, double x2, double x3, double y1, double y2, double y3)
+        public static double CalcularPerimetro(double x1, double x2, double x3, double y1, double y2, double y3)
         {
             Punto punto1 = new Punto(x1, y1);
             Punto punto2 = new Punto(x2, y2);

@@ -8,14 +8,14 @@ namespace Ejercicio01
 {
     internal static class ControladorCirculo
     {
-        public static double Area(double x, double y, double r)
+        public static double CalcularArea(double x, double y, double r)
         {
             Circulo circulo = new Circulo(x, y, r);
 
             return Math.Round(circulo.Area, 2);
         }
 
-        public static double Perimetro(double x, double y, double r)
+        public static double CalcularPerimetro(double x, double y, double r)
         {
             Circulo circulo = new Circulo(x, y, r);
 
