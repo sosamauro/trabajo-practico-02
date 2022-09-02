@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio02
 {
-    internal class Moneda
+    public class Moneda
     {
         private string iCodigoISO, iNombre, iSimbolo;
 
