@@ -34,8 +34,8 @@ namespace Ejercicio01
             double y3 = Double.Parse(Console.ReadLine());
 
             Console.WriteLine();
-            Console.WriteLine("El área del triángulo es: " + ControladorTriangulo.Area(x1, x2, x3, y1, y2, y3));
-            Console.WriteLine("El perímetro del triángulo es: " + ControladorTriangulo.Perimetro(x1, x2, x3, y1, y2, y3));
+            Console.WriteLine("El área del triángulo es: " + ControladorTriangulo.CalcularArea(x1, x2, x3, y1, y2, y3));
+            Console.WriteLine("El perímetro del triángulo es: " + ControladorTriangulo.CalcularPerimetro(x1, x2, x3, y1, y2, y3));
             Console.WriteLine();
             Console.Write("Presione ENTER para continuar...");
             Console.ReadKey();
