@@ -9,10 +9,10 @@
             while (salir == false)
             {
                 Console.Clear();
-                Console.WriteLine("Seleccione una opción");
+                Console.WriteLine("Seleccione una opción:");
                 Console.WriteLine();
-                Console.WriteLine("1) Crear cuenta unificada");
-                Console.WriteLine("2) Operar con cuenta");
+                Console.WriteLine("1) Crear una cuenta");
+                Console.WriteLine("2) Realizar una operación");
                 Console.WriteLine();
                 Console.WriteLine("3) Salir");
                 Console.WriteLine();
@@ -25,6 +25,7 @@
                         PantallaCrearCuenta.CrearCuenta();
                         break;
                     case "2":
+                        PantallaOperaciones.OperarConCuenta();
                         break;
                     case "3":
                         salir = true;

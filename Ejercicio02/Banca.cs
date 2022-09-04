@@ -20,13 +20,13 @@ namespace Ejercicio02
         public Cuenta CuentaEnDolares
         {
             get { return this.iCuentaEnDolares; }
-            set { this.iCuentaEnDolares = value; }
+            set { this.iCuentaEnDolares = ControladorCuenta.CrearCuentaEnDolares(); }
         }
 
         public Cuenta CuentaEnPesos
         {
             get { return this.iCuentaEnPesos; }
-            set { this.iCuentaEnPesos = value; }
+            set { this.iCuentaEnPesos = ControladorCuenta.CrearCuentaEnPesos(); }
         }
 
         public string Numero
