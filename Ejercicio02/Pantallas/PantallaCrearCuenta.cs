@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Ejercicio02.Clases;
 using Ejercicio02.Controladores;
 
 namespace Ejercicio02.Pantallas
