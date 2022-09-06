@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Ejercicio02.Clases;
+using Ejercicio02.Metodos;
 
 namespace Ejercicio02.Pantallas
 {
@@ -13,9 +14,7 @@ namespace Ejercicio02.Pantallas
         {
             Console.Clear();
             Console.WriteLine($"El saldo de la cuenta es: {pCuenta.Saldo} {pMoneda}");
-            Console.WriteLine();
-            Console.Write("Presione ENTER para continuar...");
-            Console.ReadKey();
+            MetodosDePantalla.Continuar();
         }
     }
 }

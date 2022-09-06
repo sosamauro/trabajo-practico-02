@@ -13,15 +13,14 @@ namespace Ejercicio02.Repositorio
         private static int i = 0;
         public static Banca Obtener(string pNumero)
         {
-            foreach (Banca arregloBanca in iArregloBanca)
+            if (iArregloBanca[0] != null)
             {
-                if (pNumero == arregloBanca.Numero)
+                foreach (Banca arregloBanca in iArregloBanca)
                 {
-                    return arregloBanca;
-                }
-                else
-                {
-                    return null;
+                    if (pNumero == arregloBanca.Numero)
+                    {
+                        return arregloBanca;
+                    }
                 }
             }
             return null;
