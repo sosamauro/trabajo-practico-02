@@ -24,6 +24,8 @@ Se recibe un requerimiento para que se desarrolle una aplicación de consola que
 - El cliente puede operar con las dos cuentas en cualquier momento, para ello debe seleccionar una de ellas y generar movimientos de débito y crédito con la posibilidad de mostrar el saldo cuando se requiera.
 - Se podrán hacer transferencias entre ambas cuentas, tomando el valor del dólar de manera prefijada. En el caso de que al momento de debitar saldo de una cuenta este no sea suficiente entonces se debe informar al usuario de esta situación.
 
+![Diagrama de clases](ejercicio2-diagrama-de-clases.jpg)
+
 Por parte del diseñador se recibe el diagrama de clases del dominio y las siguientes indicaciones:
 - La clase _Banca_ representa la cuenta unificada del cliente.
 - La clase _RepositorioBanca_ implementa el patrón Repository de Domain-Driven Design. Revisar en internet el concepto y aplicarlo. Dado que no disponemos de un gestor de base de datos, implemente el patrón repositorio en memoria mediante un arreglo.
