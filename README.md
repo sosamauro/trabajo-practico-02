@@ -10,9 +10,11 @@ Las funcionalidades que debe poseer la aplicación son las siguientes:
 - Área y perímetro de un círculo.
 - Área y perímetro de un triángulo.
 
-También se recibe un diagrama de clases del diseñador de su equipo de desarrollo el cual define objetos de dominio que se deben crear para satisfacer los requerimientos. Además se indica que se debe utilizar el patrón de diseño GRASP Controlador de Fachada para desacoplar la lógica del dominio de la interfaz.
+También se recibe un diagrama de clases del diseñador de su equipo de desarrollo el cual define objetos de dominio que se deben crear para satisfacer los requerimientos. Además se indica que se debe utilizar el patrón de diseño GRASP _Controlador de Fachada_ para desacoplar la lógica del dominio de la interfaz.
 
 Desarrolle una aplicación que satisfaga el requerimiento de basándose en el diseño y a las indicaciones realizadas. Implemente casos de prueba unitarios para las clases que considere adecuadas.
+
+![Diagrama de clases](ejercicio1-diagrama-de-clases.jpg)
 
 ## Ejercicio 2
 
