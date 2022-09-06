@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Ejercicio02.Clases;
+using Ejercicio02.Metodos;
 using Ejercicio02.Repositorio;
 
 namespace Ejercicio02.Pantallas
@@ -14,8 +15,9 @@ namespace Ejercicio02.Pantallas
         {
             Boolean salir = false;
             Boolean atras = false;
+            Boolean pesos = false;
             string pNumero = null;
-            Banca pBanca;
+            Banca pBanca = null;
             while (salir == false)
             {
                 Console.Clear();
@@ -31,45 +33,52 @@ namespace Ejercicio02.Pantallas
                 switch (Console.ReadLine())
                 {
                     case "1":
-                        pNumero = PantallaCrearCuenta.CrearCuenta();
+                        PantallaCrearCuenta.CrearCuenta();
                         break;
                     case "2":
-                        atras = false;
-                        while (atras == false)
+                        Console.Clear();
+                        Console.Write("Ingrese el número unificado de cuenta: ");
+                        pNumero = Console.ReadLine();
+                        pBanca = RepositorioBanca.Obtener(pNumero);
+                        if (pBanca != null)
                         {
-                            Console.Clear();
-                            Console.WriteLine("Seleccione una cuenta: ");
-                            Console.WriteLine();
-                            Console.WriteLine("1) Cuenta en pesos");
-                            Console.WriteLine("2) Cuenta en dólares");
-                            Console.WriteLine();
-                            Console.WriteLine("3) Volver atrás");
-                            Console.WriteLine();
-                            Console.Write("Opción: ");
-                            switch (Console.ReadLine())
+                            while (atras == false)
                             {
-                                case "1":
-                                    pBanca = RepositorioBanca.Obtener(pNumero);
-                                    PantallaOperaciones.OperarConCuentaEnPesos(pBanca);
-                                    break;
-                                case "2":
-                                    pBanca = RepositorioBanca.Obtener(pNumero);
-                                    PantallaOperaciones.OperarConCuentaEnDolares(pBanca);
-                                    break;
-                                case "3":
-                                    atras = true;
-                                    Console.Clear();
-                                    break;
-                                default:
-                                    Console.Clear();
-                                    Console.WriteLine("Ingrese una opción válida.");
-                                    Console.WriteLine();
-                                    Console.Write("Presione ENTER para continuar...");
-                                    Console.ReadKey();
-                                    Console.Clear();
-                                    break;
+                                Console.Clear();
+                                Console.WriteLine("Seleccione una cuenta: ");
+                                Console.WriteLine();
+                                Console.WriteLine("1) Cuenta en pesos");
+                                Console.WriteLine("2) Cuenta en dólares");
+                                Console.WriteLine();
+                                Console.WriteLine("3) Volver atrás");
+                                Console.WriteLine();
+                                Console.Write("Opción: ");
+                                switch (Console.ReadLine())
+                                {
+                                    case "1":
+                                        PantallaOperaciones.OperarConCuentaEnPesos(pBanca);
+                                        break;
+                                    case "2":
+                                        PantallaOperaciones.OperarConCuentaEnDolares(pBanca);
+                                        break;
+                                    case "3":
+                                        atras = true;
+                                        Console.Clear();
+                                        break;
+                                    default:
+                                        Console.Clear();
+                                        Console.WriteLine("Ingrese una opción válida.");
+                                        MetodosDePantalla.Continuar();
+                                        break;
+                                }
                             }
                         }
+                        else
+                        {
+                            Console.Clear();
+                            Console.WriteLine("No se encontró ninguna cuenta.");
+                            MetodosDePantalla.Continuar();
+                        }                     
                         break;
                     case "3":
                         salir = true;
@@ -78,10 +87,7 @@ namespace Ejercicio02.Pantallas
                     default:
                         Console.Clear();
                         Console.WriteLine("Ingrese una opción válida.");
-                        Console.WriteLine();
-                        Console.Write("Presione ENTER para continuar...");
-                        Console.ReadKey();
-                        Console.Clear();
+                        MetodosDePantalla.Continuar();
                         break;
                 }
 

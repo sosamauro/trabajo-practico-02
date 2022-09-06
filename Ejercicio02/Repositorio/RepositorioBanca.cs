@@ -19,6 +19,10 @@ namespace Ejercicio02.Repositorio
                 {
                     return arregloBanca;
                 }
+                else
+                {
+                    return null;
+                }
             }
             return null;
         }
