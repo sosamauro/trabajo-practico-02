@@ -73,6 +73,6 @@ Se debe construir una clase que sirva para representar un número complejo y que
 - Los métodos _Sumar y Restar_ devuelven otra instancia de la clase conteniendo el resultado de la operación respectivamente.
 - Análogamente los métodos _MultiplicarPor_ y _DividirPor_ devuelven otra instancia de la clase conteniendo el resultado de la operación respectivamente.
 
-<img src="ejercicio5-diagrama-de-clases.jpg" width="600">
+<center><img src="ejercicio5-diagrama-de-clases.jpg" width="600"></center>
 
 Las instancias de la clase creada deben ser _inmutables_, por lo que debe investigar dicho concepto y la forma de implementarlo correctamente utilizando C#. Implemente casos de prueba unitario para la clase.
