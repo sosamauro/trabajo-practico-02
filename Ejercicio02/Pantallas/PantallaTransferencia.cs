@@ -39,6 +39,7 @@ namespace Ejercicio02.Pantallas
 
                         Console.Clear();
                         Console.WriteLine("Se ha transferido exitosamente.");
+                        Console.WriteLine();
                         Console.WriteLine($"Su saldo de cuenta en pesos es: {pCuentaPesos.Saldo} ARS.");
                         Console.WriteLine($"Su saldo de cuenta en dolares es: {pCuentaDolares.Saldo} USD.");
                         MetodosDePantalla.Continuar();
@@ -87,6 +88,7 @@ namespace Ejercicio02.Pantallas
 
                         Console.Clear();
                         Console.WriteLine("Se ha transferido exitosamente.");
+                        Console.WriteLine();
                         Console.WriteLine($"Su saldo de cuenta en pesos es: {pCuentaPesos.Saldo} ARS.");
                         Console.WriteLine($"Su saldo de cuenta en dolares es: {pCuentaDolares.Saldo} USD.");
                         MetodosDePantalla.Continuar();

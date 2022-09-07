@@ -42,6 +42,7 @@ namespace Ejercicio02.Pantallas
                         pBanca = RepositorioBanca.Obtener(pNumero);
                         if (pBanca != null)
                         {
+                            atras = false;
                             while (atras == false)
                             {
                                 Console.Clear();

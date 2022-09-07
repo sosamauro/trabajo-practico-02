@@ -18,6 +18,7 @@ namespace Ejercicio02.Pantallas
             pCuenta.AcreditarSaldo(pSaldo);
             Console.Clear();
             Console.WriteLine("Se ha acreditado exitosamente.");
+            Console.WriteLine();
             Console.WriteLine($"Su saldo actual es: {pCuenta.Saldo} {pMoneda}");
             MetodosDePantalla.Continuar();
         }

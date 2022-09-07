@@ -19,6 +19,7 @@ namespace Ejercicio02.Pantallas
             {
                 Console.Clear();
                 Console.WriteLine("Se ha debitado exitosamente.");
+                Console.WriteLine();
                 Console.WriteLine($"Su saldo actual es: {pCuenta.Saldo} {pMoneda}.");
                 MetodosDePantalla.Continuar();
             }

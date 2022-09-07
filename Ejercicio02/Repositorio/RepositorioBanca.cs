@@ -43,11 +43,6 @@ namespace Ejercicio02.Repositorio
             }
             else
             {
-                /*int i = 0;
-                while (iArregloBanca[i] != null)
-                {
-                    
-                }*/
                 iArregloBanca[i] = pBanca;
                 i++;
             }
