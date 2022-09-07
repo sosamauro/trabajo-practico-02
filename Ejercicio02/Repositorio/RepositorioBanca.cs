@@ -9,15 +9,23 @@ namespace Ejercicio02.Repositorio
 {
     public static class RepositorioBanca
     {
-        private static Banca[] iArregloBanca = new Banca[10];
-        private static int i = 0;
+        private static Banca[] iArregloBanca;
+        private static int i = 1;
         public static Banca Obtener(string pNumero)
         {
-            if (iArregloBanca[0] != null)
+            if (iArregloBanca == null)
+            {
+                return null;
+            }
+            else
             {
                 foreach (Banca arregloBanca in iArregloBanca)
                 {
-                    if (pNumero == arregloBanca.Numero)
+                    if (arregloBanca == null)
+                    {
+                        return null;
+                    } 
+                    else if (pNumero == arregloBanca.Numero)
                     {
                         return arregloBanca;
                     }
@@ -28,8 +36,21 @@ namespace Ejercicio02.Repositorio
 
         public static void Agregar(Banca pBanca)
         {
-            iArregloBanca[i] = pBanca;
-            i++;
+            if (iArregloBanca == null)
+            {
+                iArregloBanca = new Banca[10];
+                iArregloBanca[0] = pBanca;
+            }
+            else
+            {
+                /*int i = 0;
+                while (iArregloBanca[i] != null)
+                {
+                    
+                }*/
+                iArregloBanca[i] = pBanca;
+                i++;
+            }
         }
     }
 }
