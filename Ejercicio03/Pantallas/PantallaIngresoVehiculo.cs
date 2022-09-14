@@ -12,16 +12,37 @@ namespace Ejercicio03.Pantallas
 	{
 		public static void MostrarPantalla()
 		{
-			Boolean hayLugar = Controlador.ComprobarLugaresDisponibles();
-
 			if (hayLugar)
 			{
+				Console.Clear();
+				Console.WriteLine("Los siguientes lugares se encuentran disponibles:");
+				
+				// *** Mostrar lugares disponibles ***
 
+				// El usuario ingresa algún lugar y la aplicación comprueba si existe.
+				// - Si el lugar existe, se lo elimina del array de lugares disponibles y 
+				//   se lo agrega al array de lugares ocupados. 
+				// - Si el lugar no existe, se muestra un mensaje notificándolo
+				//   y se muestra una pantalla para volver a ingresar un lugar.
+
+				//Clase estacionamiento: Patente, HoraIngreso, HoraEgreso;
+				//Disponibilidad - Property
+				//Tarucha - Property
+
+				Console.Write("Ingrese la patente del vehículo: ");
+				string patente = Console.ReadLine();
+
+				Console.Write("Ingrese el código de estacionamiento");
+				int codigoEstacionamiento = Console.ReadLine();
+
+				
+	
+				
 			}
 			else
 			{
 				Console.Clear();
-				Console.WriteLine(value: "No hay lugares disponibles");
+				Console.WriteLine("No hay lugares disponibles");
 				MetodosDePantalla.Continuar();
 			}
 		}

@@ -12,5 +12,13 @@ namespace Ejercicio03.Controladores
         {
         	return false;
         }
+
+		public static CrearParking(string pPatente, int pCodigoEstacionamiento)
+		{
+			Parking parking = new Parking(pCodigoEstacionamiento);
+			parking.Patente = pPatente;
+
+			
+		}
     }
 }

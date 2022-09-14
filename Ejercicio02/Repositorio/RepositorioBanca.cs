@@ -17,7 +17,7 @@ namespace Ejercicio02.Repositorio
             {
                 return null;
             }
-            else
+            elsed
             {
                 foreach (Banca arregloBanca in iArregloBanca)
                 {
