@@ -7,60 +7,60 @@ using Ejercicio03.Clases;
 
 namespace Ejercicio03.Clases
 {
-  public class Parking
-  {
-    private string iPatente, iHoraIngreso, iHoraEgreso;
-    private int iCodigo;
-
-    public Parking(int pCodigo)
+    public class Parking
     {
-      iCodigo = pCodigo;
-    }
+		private string iPatente, iHoraIngreso, iHoraEgreso;
+		private int iCodigo;
 
-    public int Codigo
-    {
-      get { return this.iCodigo; }
-      set { this.iCodigo = value; }
-    }
+		public Parking(int pCodigo)
+		{
+			iCodigo = pCodigo;
+		}
 
-    public string Patente
-    {
-      get { return this.iPatente; }
-      set { this.iPatente = value; }
-    }
+		public int Codigo
+		{
+			get { return this.iCodigo; }
+			set { this.iCodigo = value; }
+		}
 
-    public string HoraIngreso
-    {
-      get { return this.iHoraIngreso; }
-      set { this.iHoraIngreso = value; }
-    }
+		public string Patente
+		{
+			get { return this.iPatente; }
+			set { this.iPatente = value; }
+		}
 
-    public string HoraEgreso
-    {
-      get { return this.iHoraEgreso; }
-      set { this.iHoraEgreso = value; }
-    }
+		public string HoraIngreso
+		{
+			get { return this.iHoraIngreso; }
+			set { this.iHoraIngreso = value; }
+		}
 
-    public double TiempoOcupado
-    {
-      get
-      {
-        double horaIngresoD = double.Parse(string.Format("{0}.{1}", ((this.HoraIngreso).Split(':'))[0], ((this.HoraIngreso).Split(':'))[1]));
-        double horaEgresoD = double.Parse(string.Format("{0}.{1}", ((this.HoraEgreso).Split(':'))[0], ((this.HoraEgreso).Split(':'))[1]));
-        return (Math.Round((horaEgresoD - horaIngresoD) * 2) / 2); //Redondear la Hora cada 0.5
-      }
-    }
+		public string HoraEgreso
+		{
+			get { return this.iHoraEgreso; }
+			set { this.iHoraEgreso = value; }
+		}
 
-    public double Tarifa
-    {
-      get { return this.TiempoOcupado * 200; }
-    }
+		public double TiempoOcupado
+		{
+			get
+			{
+				double horaIngresoD = double.Parse(string.Format("{0}.{1}", ((this.HoraIngreso).Split(':'))[0], ((this.HoraIngreso).Split(':'))[1]));
+				double horaEgresoD = double.Parse(string.Format("{0}.{1}", ((this.HoraEgreso).Split(':'))[0], ((this.HoraEgreso).Split(':'))[1]));
+				return (Math.Round((horaEgresoD - horaIngresoD) * 2) / 2); //Redondear la Hora cada 0.5
+			}
+		}
 
-    // **** INGRESAR HORA **** 
-    // int hours = 5;
-    // int minutes = 55;
-    // int seconds = 7;
-    // TimeSpan ts = new TimeSpan(hours, minutes, seconds);
-    // Console.WriteLine("{0:00}:{1:00}:{2:00}", ts.Hours, ts.Minutes, ts.Seconds);
-  }
+		public double Tarifa
+		{
+			get { return this.TiempoOcupado * 200; }
+		}
+
+		// **** INGRESAR HORA **** 
+		// int hours = 5;
+		// int minutes = 55;
+		// int seconds = 7;
+		// TimeSpan ts = new TimeSpan(hours, minutes, seconds);
+		// Console.WriteLine("{0:00}:{1:00}:{2:00}", ts.Hours, ts.Minutes, ts.Seconds);
+	}
 }

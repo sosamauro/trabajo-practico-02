@@ -9,31 +9,58 @@ using Ejercicio03.Metodos;
 
 namespace Ejercicio03.Pantallas
 {
-  public static class PantallaIngresoVehiculo
-  {
-    public static void MostrarPantalla(Parking[] pParking)
-    {
-      Boolean hayLugar = Controlador.HayLugarDisponible(pParking);
+	public static class PantallaIngresoVehiculo
+	{
+		public static void MostrarPantalla(Parking[] pParking)
+		{
+			
+			Boolean hayLugar = Controlador.HayLugarDisponible(pParking);
 
-      if (hayLugar)
-      {
-        Console.Clear();
-        Console.WriteLine("Los siguientes lugares se encuentran disponibles:");
+			if (hayLugar)
+			{
+				Console.Clear();
+				Console.WriteLine("Los siguientes lugares se encuentran disponibles:");
 
-        Controlador.MostrarLugaresDisponibles(pParking);
+				Console.WriteLine();	
+				Controlador.MostrarLugaresDisponibles(pParking);
+				Console.WriteLine();
 
-        Console.Write("Ingrese la patente del vehículo: ");
-        string patente = Console.ReadLine();
+				try {
+					Console.Write("Ingrese el código de estacionamiento: ");
+					int codigoEstacionamiento = Convert.ToInt32(Console.ReadLine());	
 
-        Console.Write("Ingrese el código de estacionamiento");
-        int codigoEstacionamiento = Convert.ToInt16(Console.ReadLine());
-      }
-      else
-      {
-        Console.Clear();
-        Console.WriteLine("No hay lugares disponibles");
-        MetodosDePantalla.Continuar();
-      }
-    }
-  }
+					if (Controlador.ComprobarLugarEstacionamiento(pParking, codigoEstacionamiento))
+					{
+						Console.WriteLine();
+						Console.Write("Ingrese la patente del vehículo: ");
+						string patente = Console.ReadLine();
+
+						Controlador.IngresarVehiculo(pParking, patente, codigoEstacionamiento);
+						
+						Console.Clear();
+						Console.WriteLine();
+						Console.WriteLine($"El vehiculo de patente '{pParking[codigoEstacionamiento].Patente}' será ubicado en el parking número {pParking[codigoEstacionamiento].Codigo}.");
+						MetodosDePantalla.Continuar();
+					}
+					else
+					{
+						Console.Clear();
+						Console.WriteLine("El lugar ingresado está ocupado.");
+						MetodosDePantalla.Continuar();
+					}
+				}
+				catch (FormatException) {
+					Console.Clear();
+					Console.WriteLine("El código de estacionamiento no es válido.");
+					MetodosDePantalla.Continuar();
+				}				
+			}
+			else
+			{
+				Console.Clear();
+				Console.WriteLine("No hay lugares disponibles");
+				MetodosDePantalla.Continuar();
+			}
+		}
+	}
 }
