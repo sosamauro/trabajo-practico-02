@@ -9,7 +9,8 @@ namespace Ejercicio03.Clases
 {
     public class Parking
     {
-		private string iPatente, iHoraIngreso, iHoraEgreso;
+		private string iPatente;
+		private TimeSpan iHoraIngreso, iHoraEgreso;
 		private int iCodigo;
 
 		public Parking(int pCodigo)
@@ -29,38 +30,16 @@ namespace Ejercicio03.Clases
 			set { this.iPatente = value; }
 		}
 
-		public string HoraIngreso
+		public TimeSpan HoraIngreso
 		{
 			get { return this.iHoraIngreso; }
 			set { this.iHoraIngreso = value; }
 		}
 
-		public string HoraEgreso
+		public TimeSpan HoraEgreso
 		{
 			get { return this.iHoraEgreso; }
 			set { this.iHoraEgreso = value; }
 		}
-
-		public double TiempoOcupado
-		{
-			get
-			{
-				double horaIngresoD = double.Parse(string.Format("{0}.{1}", ((this.HoraIngreso).Split(':'))[0], ((this.HoraIngreso).Split(':'))[1]));
-				double horaEgresoD = double.Parse(string.Format("{0}.{1}", ((this.HoraEgreso).Split(':'))[0], ((this.HoraEgreso).Split(':'))[1]));
-				return (Math.Round((horaEgresoD - horaIngresoD) * 2) / 2); //Redondear la Hora cada 0.5
-			}
-		}
-
-		public double Tarifa
-		{
-			get { return this.TiempoOcupado * 200; }
-		}
-
-		// **** INGRESAR HORA **** 
-		// int hours = 5;
-		// int minutes = 55;
-		// int seconds = 7;
-		// TimeSpan ts = new TimeSpan(hours, minutes, seconds);
-		// Console.WriteLine("{0:00}:{1:00}:{2:00}", ts.Hours, ts.Minutes, ts.Seconds);
 	}
 }

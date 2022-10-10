@@ -9,6 +9,8 @@ namespace Ejercicio03.Controladores
 {
     public static class Controlador
     {
+        // Inicializa el arreglo Parking, siendo, cada index del arreglo igual
+        // al código de estacionamiento.
         public static Parking[] InicializarParking()
         {
             Parking[] arregloParking = new Parking[2];
@@ -21,7 +23,7 @@ namespace Ejercicio03.Controladores
             return arregloParking;
         }
 
-        // Devuelve TRUE si encuentra al menos 1 lugar disponible
+        // Devuelve TRUE si encuentra un lugar disponible.
         public static Boolean HayLugarDisponible(Parking[] pParking)
         {
             for (int i = 0; i < pParking.Length; i++)
@@ -34,6 +36,7 @@ namespace Ejercicio03.Controladores
             return false;
         }
 
+        // Muestra los lugares disponibles.
         public static void MostrarLugaresDisponibles(Parking[] pParking)
         {
             for (int i = 0; i < pParking.Length; i++)
@@ -45,9 +48,11 @@ namespace Ejercicio03.Controladores
             }
         }
 
+        // Asigna la patente al lugar de estacionamiento.
         public static void IngresarVehiculo(Parking[] pParking, string pPatente, int pCodigoEstacionamiento)
         {
             pParking[pCodigoEstacionamiento].Patente = pPatente;
+            pParking[pCodigoEstacionamiento].HoraIngreso = DateTime.Now.TimeOfDay;
         }
 
         // Devuelve:
@@ -62,5 +67,32 @@ namespace Ejercicio03.Controladores
             }
             return false;
         }
+
+        // Se le pasa un parking y una patente como parámetros. 
+        // - Si existe la patente, se la  elimina del parking y devuelve TRUE. 
+        // - Si no existe la patente, devuelve FALSE.
+        public static Boolean RetirarVehiculo(Parking[] pParking, string pPatente)
+        {
+            for (int i = 0; i < pParking.Length; i++)
+            {
+                if (pParking[i].Patente == pPatente)
+                {
+                    pParking[i].Patente = null;
+                    pParking[i].HoraEgreso = DateTime.Now.TimeOfDay;
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        // public double TiempoOcupado
+		// {
+		// 	get
+		// 	{
+		// 		double horaIngresoD = double.Parse(string.Format("{0}.{1}", ((this.HoraIngreso).Split(':'))[0], ((this.HoraIngreso).Split(':'))[1]));
+		// 		double horaEgresoD = double.Parse(string.Format("{0}.{1}", ((this.HoraEgreso).Split(':'))[0], ((this.HoraEgreso).Split(':'))[1]));
+		// 		return (Math.Round((horaEgresoD - horaIngresoD) * 2) / 2); //Redondear la Hora cada 0.5
+		// 	}
+		// }
     }
 }

@@ -36,6 +36,7 @@ namespace Ejercicio03.Pantallas
             PantallaIngresoVehiculo.MostrarPantalla(pParking);
             break;
           case "2":
+          PantallaRetiroVehiculo.MostrarPantalla(pParking);
             break;
           case "3":
             salir = true;

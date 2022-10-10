@@ -40,6 +40,7 @@ namespace Ejercicio03.Pantallas
 						Console.Clear();
 						Console.WriteLine();
 						Console.WriteLine($"El vehiculo de patente '{pParking[codigoEstacionamiento].Patente}' será ubicado en el parking número {pParking[codigoEstacionamiento].Codigo}.");
+						Console.WriteLine($"Hora de ingreso: {pParking[codigoEstacionamiento].HoraIngreso}");
 						MetodosDePantalla.Continuar();
 					}
 					else
@@ -58,7 +59,7 @@ namespace Ejercicio03.Pantallas
 			else
 			{
 				Console.Clear();
-				Console.WriteLine("No hay lugares disponibles");
+				Console.WriteLine("No hay lugares disponibles.");
 				MetodosDePantalla.Continuar();
 			}
 		}
