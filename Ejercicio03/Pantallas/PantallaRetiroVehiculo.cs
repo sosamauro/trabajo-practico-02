@@ -13,26 +13,46 @@ namespace Ejercicio03.Pantallas
     {
         public static void MostrarPantalla(Parking[] pParking)
         {
-            Boolean vehiculoRetirado = false;
+            Boolean salir = false;
 
-            Console.Clear();
-            Console.Write("Ingrese la patente del vehículo: ");
-            string patente = Console.ReadLine();
-
-            vehiculoRetirado = Controlador.RetirarVehiculo(pParking, patente);
-
-            if (vehiculoRetirado)
+            while (salir == false)
             {
-                Console.Clear();
-                Console.WriteLine("El vehículo se retiró del parking.");
-                MetodosDePantalla.Continuar();
+                try {
+                    Console.Clear();
+                    Console.Write("Ingrese el código de estacionamiento: ");
+                    int codigoEstacionamiento = Convert.ToInt32(Console.ReadLine());
+
+                    Console.WriteLine();
+                    Console.WriteLine($"¿Desea retirar el vehículo de patente '{pParking[codigoEstacionamiento].Patente}'?");
+                    Console.WriteLine();
+                    Console.WriteLine("1) Confirmar");
+                    Console.WriteLine("2) Cancelar");
+                    Console.WriteLine();
+
+                    switch (Console.ReadLine())
+                    {
+                        case "1":
+                            Console.WriteLine("Ingrese la hora de egreso (Ej: '18:15'): ");
+                            string horaEgreso = Console.ReadLine();
+                            break;
+                        case "2":
+                            salir = true;
+                            break;
+                        default:
+                            Console.Clear();
+                            Console.WriteLine("Ingrese una opción válida.");
+                            MetodosDePantalla.Continuar();
+                            break;
+                    }
+                }
+                catch (FormatException) {
+                    Console.Clear();
+                    Console.WriteLine("El código de estacionamiento no es válido.");
+                    MetodosDePantalla.Continuar();
+                }      
             }
-            else
-            {
-                Console.Clear();
-                Console.WriteLine($"No se encontró ningún vehículo con patente '{patente}'.");
-                MetodosDePantalla.Continuar();
-            }
+
+                 
         }
     }
 }

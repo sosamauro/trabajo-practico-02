@@ -9,8 +9,7 @@ namespace Ejercicio03.Clases
 {
     public class Parking
     {
-		private string iPatente;
-		private TimeSpan iHoraIngreso, iHoraEgreso;
+		private string iPatente, iHoraIngreso;
 		private int iCodigo;
 
 		public Parking(int pCodigo)
@@ -30,16 +29,10 @@ namespace Ejercicio03.Clases
 			set { this.iPatente = value; }
 		}
 
-		public TimeSpan HoraIngreso
+		public string HoraIngreso
 		{
 			get { return this.iHoraIngreso; }
 			set { this.iHoraIngreso = value; }
-		}
-
-		public TimeSpan HoraEgreso
-		{
-			get { return this.iHoraEgreso; }
-			set { this.iHoraEgreso = value; }
 		}
 	}
 }
