@@ -38,7 +38,7 @@ namespace Ejercicio04.Controladores
             arregloPalabra[26] = "Malevo Ferreyra";
             arregloPalabra[27] = "Chapa Suñe";
             arregloPalabra[28] = "Chancha Rinaldi";
-            arregloPalabra[29] = "Chaucha Bianco";
+            arregloPalabra[29] = "Chilo Chiloteguy";
 
             return arregloPalabra;
         }
@@ -46,6 +46,16 @@ namespace Ejercicio04.Controladores
         public static void CrearPartida(string pJugador)
         {
             Partida pPartida = new Partida(pJugador, DateTime.Now);
+        }
+
+        public static string SeleccionarPalabra(string[] pPalabras)
+        {
+            // Este código selecciona una palabra aleatoria del arreglo.
+            Random rd = new Random();
+            int randomIndex = rd.Next(0, 30);
+            string palabra = pPalabras[randomIndex];
+
+            return palabra;
         }
     }
 }

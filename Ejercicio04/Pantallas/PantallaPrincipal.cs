@@ -14,13 +14,16 @@ namespace Ejercicio04.Pantallas
             string[] palabras = Controlador.InicializarArregloPalabras();
 
             while (salir == false)
-            {
+            {   
+                Console.Clear();
                 Console.WriteLine("Elija una opción: ");
                 Console.WriteLine();
-                Console.WriteLine("1) Jugar una partida");
-                Console.WriteLine("2) Listar las 5 partidas ganadas con menor duración");
+                Console.WriteLine("1) Jugar una partida.");
+                Console.WriteLine("2) Listar las 5 partidas ganadas con menor duración.");
                 Console.WriteLine();
                 Console.WriteLine("3) Salir");
+                Console.WriteLine();
+                Console.Write("Opción: ");
             
                 switch (Console.ReadLine())
                 {
@@ -30,6 +33,8 @@ namespace Ejercicio04.Pantallas
                     case "2":
                         break;
                     case "3":
+                        Console.Clear();
+                        salir = true;
                         break;
                     default: 
                         Console.Clear();
