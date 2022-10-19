@@ -6,7 +6,7 @@ namespace Ejercicio04
     {
         static void Main(string[] args)
         {
-            PantallaPrincipal.MostrarPantalla();
+            PantallaPrincipal.MostrasPantalla();
         }
     }
 }

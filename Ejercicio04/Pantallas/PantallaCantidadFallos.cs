@@ -1,9 +1,12 @@
-using System;
-using Ejercicio04.Metodos;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Ejercicio04.Pantallas
 {
-    public static class PantallaCantFallos
+    public static class PantallaCantidadFallos
     {
         public static int MostrarPantalla()
         {

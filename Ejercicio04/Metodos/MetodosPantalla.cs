@@ -1,8 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Ejercicio04.Metodos
 {
-    public static class MetodosDePantalla
+    public static class MetodosPantalla
     {
         public static void Continuar()
         {
@@ -11,6 +15,5 @@ namespace Ejercicio04.Metodos
             Console.ReadKey();
             Console.Clear();
         }
-        
     }
 }

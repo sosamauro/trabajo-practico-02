@@ -1,20 +1,24 @@
-using System;
-using Ejercicio04.Metodos;
-using Ejercicio04.Pantallas;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Ejercicio04.Controladores;
+using Ejercicio04.Pantallas;
+using Ejercicio04.Metodos;
 
 namespace Ejercicio04.Pantallas
 {
     public static class PantallaPrincipal
     {
-        public static void MostrarPantalla()
+        public static void MostrasPantalla()
         {
             Boolean salir = false;
 
             string[] palabras = Controlador.InicializarArregloPalabras();
 
             while (salir == false)
-            {   
+            {
                 Console.Clear();
                 Console.WriteLine("Elija una opción: ");
                 Console.WriteLine();
@@ -24,7 +28,7 @@ namespace Ejercicio04.Pantallas
                 Console.WriteLine("3) Salir");
                 Console.WriteLine();
                 Console.Write("Opción: ");
-            
+
                 switch (Console.ReadLine())
                 {
                     case "1":
@@ -36,10 +40,10 @@ namespace Ejercicio04.Pantallas
                         Console.Clear();
                         salir = true;
                         break;
-                    default: 
+                    default:
                         Console.Clear();
                         Console.WriteLine("Ingrese una opción válida.");
-                        MetodosDePantalla.Continuar();
+                        MetodosPantalla.Continuar();
                         break;
                 }
             }

@@ -1,6 +1,9 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Ejercicio04.Controladores;
-using Ejercicio04.Pantallas;
 using Ejercicio04.Metodos;
 
 namespace Ejercicio04.Pantallas
@@ -13,14 +16,14 @@ namespace Ejercicio04.Pantallas
 
             Console.Write("Ingrese el nombre del jugador: ");
             string pJugador = Console.ReadLine();
-            
+
             Controlador.CrearPartida(pJugador);
 
-            int cantFallos = PantallaCantFallos.MostrarPantalla();
-            string palabra = Controlador.SeleccionarPalabra(pPalabras);
+            string palabra = Controlador.ObtenerPalabra(pPalabras);
 
-            
+            int cantFallos = PantallaCantidadFallos.MostrarPantalla();
 
+            PantallaEnPartida.MostrarPantalla(palabra, cantFallos);
         }
     }
 }
