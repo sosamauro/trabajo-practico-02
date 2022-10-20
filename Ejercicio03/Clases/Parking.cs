@@ -9,8 +9,10 @@ namespace Ejercicio03.Clases
 {
     public class Parking
     {
-		private string iPatente, iHoraIngreso;
-		private int iCodigo;
+		private string iPatente;
+		private DateTime iHoraIngreso;
+
+        private int iCodigo;
 
 		public Parking(int pCodigo)
 		{
@@ -29,7 +31,7 @@ namespace Ejercicio03.Clases
 			set { this.iPatente = value; }
 		}
 
-		public string HoraIngreso
+		public DateTime HoraIngreso
 		{
 			get { return this.iHoraIngreso; }
 			set { this.iHoraIngreso = value; }

@@ -49,7 +49,7 @@ namespace Ejercicio03.Controladores
         }
 
         // Asigna la patente al lugar de estacionamiento.
-        public static void IngresarVehiculo(Parking[] pParking, string pPatente, int pCodigoEstacionamiento, string pHoraIngreso)
+        public static void IngresarVehiculo(Parking[] pParking, string pPatente, int pCodigoEstacionamiento, DateTime pHoraIngreso)
         {
             pParking[pCodigoEstacionamiento].Patente = pPatente;
             pParking[pCodigoEstacionamiento].HoraIngreso = pHoraIngreso;
@@ -68,25 +68,20 @@ namespace Ejercicio03.Controladores
             return false;
         }
 
-        // Se le pasa un parking y una patente como parámetros. 
-        // - Si existe la patente, se la  elimina del parking y devuelve TRUE. 
-        // - Si no existe la patente, devuelve FALSE.
-        public static Boolean RetirarVehiculo(Parking[] pParking, string pPatente)
+        // Elimina el vehículo del arreglo Parking
+        public static void RetirarVehiculo(Parking[] pParking, int pCodigoEstacionamiento)
         {
-            for (int i = 0; i < pParking.Length; i++)
-            {
-                if (pParking[i].Patente == pPatente)
-                {
-                    pParking[i].Patente = null;
-                    return true;
-                }
-            }
-            return false;
+            pParking[pCodigoEstacionamiento].Patente = null;
         }
 
-        public static double CalcularTarifa(Parking[] pParking, int pCodigoEstacionamiento, string pHoraEgreso)
+        public static double CalcularTarifa(Parking[] pParking, int pCodigoEstacionamiento, DateTime pHoraEgreso)
         {
-            return 100.0;
+            double horasTotales = (pHoraEgreso - pParking[pCodigoEstacionamiento].HoraIngreso).TotalHours;
+            double tarifa = 200;
+
+            tarifa += Math.Round(horasTotales) * 200;
+
+            return tarifa;
         }
     }
 }

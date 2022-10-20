@@ -34,11 +34,8 @@ namespace Ejercicio03.Pantallas
 						Console.WriteLine();
 						Console.Write("Ingrese la patente del vehículo: ");
 						string patente = Console.ReadLine();
-						Console.WriteLine();
-						Console.WriteLine("Ingrese la hora de ingreso (Ej: '18:15'): ");
-						string horaIngreso = Console.ReadLine();
 
-						Controlador.IngresarVehiculo(pParking, patente, codigoEstacionamiento, horaIngreso);
+						Controlador.IngresarVehiculo(pParking, patente, codigoEstacionamiento, DateTime.Now);
 						
 						Console.Clear();
 						Console.WriteLine($"El vehiculo de patente '{pParking[codigoEstacionamiento].Patente}' será ubicado en el parking número {pParking[codigoEstacionamiento].Codigo}.");

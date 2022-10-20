@@ -32,8 +32,12 @@ namespace Ejercicio03.Pantallas
                     switch (Console.ReadLine())
                     {
                         case "1":
-                            Console.WriteLine("Ingrese la hora de egreso (Ej: '18:15'): ");
-                            string horaEgreso = Console.ReadLine();
+                            Console.Clear();
+                            double tarifa = Controlador.CalcularTarifa(pParking, codigoEstacionamiento, DateTime.Now);
+                            Console.WriteLine($"Vehículo retirado. La tarifa es: ${tarifa}");
+                            Controlador.RetirarVehiculo(pParking, codigoEstacionamiento);
+                            MetodosDePantalla.Continuar();  
+                            salir = true;
                             break;
                         case "2":
                             salir = true;
