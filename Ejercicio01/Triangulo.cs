@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio01
 {
-    internal class Triangulo
+    public class Triangulo
     {
         private Punto iPunto1, iPunto2, iPunto3;
 

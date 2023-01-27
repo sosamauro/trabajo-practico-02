@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio01
 {
-    internal class Punto
+    public class Punto
     {
         // Atributos
         private double iX, iY;

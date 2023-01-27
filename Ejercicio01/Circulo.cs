@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio01
 {
-    internal class Circulo
+    public class Circulo
     {
         private double iRadio;
         private Punto iCentro;
